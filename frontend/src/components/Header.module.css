@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 28px;
+  height: 56px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.logo span { color: var(--text); }
+
+.stats {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--subtext);
+}
+
+.stat strong { color: var(--text); }
+.stat.done strong  { color: var(--done); }
+.stat.dl strong    { color: var(--dl); }
+.stat.fail strong  { color: var(--fail); }

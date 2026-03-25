@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source venv/bin/activate)",
+      "Bash(python -c \":*)",
+      "Bash(python -m yt_dlp \"https://4fw4gd.cfglobalcdn.com/secip/1/861rQM940fF8R1fZDCdglg/OTQuMjUuMTcwLjI2/1606597200/hls-vod-s03/flv/api/files/videos/2018/08/01/153311550983uua.mp4.m3u8\" --no-playlist --no-warnings --referer \"https://strcdn.org/\" -j)",
+      "Bash(python3 -c \":*)",
+      "Bash(python -m yt_dlp \"https://4fw4gd.cfglobalcdn.com/secip/1/861rQM940fF8R1fZDCdglg/OTQuMjUuMTcwLjI2/1606597200/hls-vod-s03/flv/api/files/videos/2018/08/01/153311550983uua.mp4.m3u8\" --no-playlist --no-warnings --referer \"https://strcdn.org/\" --list-formats)",
+      "Bash(python3 -:*)",
+      "Bash(python3 -m yt_dlp --verbose --referer \"https://strcdn.org/\" --no-playlist --simulate \"https://4fw4gd.cfglobalcdn.com/secip/1/861rQM940fF8R1fZDCdglg/OTQuMjUuMTcwLjI2/1606597200/hls-vod-s03/flv/api/files/videos/2018/08/01/153311550983uua.mp4.m3u8\")",
+      "Bash(curl -sv --max-time 10 \"https://4fw4gd.cfglobalcdn.com/secip/1/861rQM940fF8R1fZDCdglg/OTQuMjUuMTcwLjI2/1606597200/hls-vod-s03/flv/api/files/videos/2018/08/01/153311550983uua.mp4.m3u8\")",
+      "Bash(python3 -m yt_dlp --list-extractors)",
+      "Bash(host 4fw4gd.cfglobalcdn.com)",
+      "Bash(curl -v --max-time 8 --ipv4 \"https://4fw4gd.cfglobalcdn.com/\")",
+      "Bash(curl -v --max-time 5 --ipv4 \"http://84.16.243.199/\")",
+      "Bash(traceroute -n -m 8 84.16.243.199)",
+      "Bash(python3 -m yt_dlp --verbose --simulate --referer \"https://seriale-online.net/\" --add-header \"Origin:https://strcdn.org\" --no-check-certificates \"https://strcdn.org/e/MNKfx1iM5I7R?adfree=1\")",
+      "Bash(python3 -m yt_dlp --simulate --no-warnings \"https://f16px.com/e/frszjpae14kf\")",
+      "Bash(python3 -m yt_dlp --simulate --no-warnings \"https://vidload.co/embed/408b977d14a551e756a849e2e4375eb1\")",
+      "Bash(python3 -m yt_dlp --simulate --no-warnings \"https://myvidplay.com/e/j0l1dnnicbmj\")",
+      "Bash(python3 -m yt_dlp --simulate --no-warnings --verbose \"https://vidload.co/embed/408b977d14a551e756a849e2e4375eb1\")",
+      "Bash(python -m yt_dlp \"https://edge2-waw-sprintcdn.r66nv9ed.com/hls2/02/03200/frszjpae14kf_x/master.m3u8?t=vlhAZdS9W3Nuz6EybMZDu9yXnqjJ6KUJJfV2ukRVm_Q&s=1774355857&e=10800&f=16003454&srv=1070&asn=198099&sp=5500&p=0\" --referer \"https://f16px.com/\" --add-header \"Origin:https://f16px.com\" --no-playlist --list-formats --no-warnings)",
+      "Bash(python -m yt_dlp \"https://edge2-waw-sprintcdn.r66nv9ed.com/hls2/02/03200/frszjpae14kf_x/master.m3u8?t=vlhAZdS9W3Nuz6EybMZDu9yXnqjJ6KUJJfV2ukRVm_Q&s=1774355857&e=10800&f=16003454&srv=1070&asn=198099&sp=5500&p=0\" --referer \"https://f16px.com/\" --add-header \"Origin:https://f16px.com\" --no-playlist --output \"/tmp/hv_test.%\\(ext\\)s\" --merge-output-format mp4 --no-warnings --newline)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s http://localhost:8000/api/shows)",
+      "Bash(curl -sv http://localhost:8000/api/shows)",
+      "Bash(python -c \"from database import get_all_shows; print\\(get_all_shows\\(\\)\\)\")",
+      "Bash(./node_modules/.bin/tsc --noEmit 2>&1)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(curl -s http://localhost:8000/api/shows -v)",
+      "Bash(python -c \"from database import get_shows; print\\(get_shows\\(\\)\\)\")",
+      "Bash(curl:*)",
+      "Bash(python -c \"from main import app; print\\(''OK''\\)\")",
+      "Bash(ps -p 52790 -o pid,ppid,command)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(python -c \"import main; print\\(''OK''\\)\")"
+    ]
+  }
+}

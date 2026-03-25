@@ -1,0 +1,57 @@
+.widget {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.running  { background: var(--done); }
+.stopped  { background: var(--fail); }
+
+.label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--subtext);
+  padding: 0 6px;
+  white-space: nowrap;
+}
+
+.label strong { color: var(--accent); }
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background: var(--border);
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--subtext);
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  transition: background 0.15s, color 0.15s;
+}
+
+.iconBtn:hover { background: var(--border); color: var(--text); }
+.iconBtn:disabled { opacity: 0.25; cursor: default; }
+
+.restart { font-size: 1rem; }
+.restart:hover { color: var(--accent2) !important; }
