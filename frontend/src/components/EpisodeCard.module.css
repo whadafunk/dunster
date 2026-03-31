@@ -2,7 +2,7 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 10px 14px 0;
+  padding: 10px 14px;
   transition: border-color 0.2s, background 0.2s;
   position: relative;
 }
@@ -54,6 +54,11 @@
   gap: 7px;
 }
 
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
 .dot {
   width: 6px;
   height: 6px;
@@ -62,15 +67,37 @@
   background: var(--muted);
 }
 .dot.pending     { background: var(--muted); }
-.dot.queued      { background: var(--accent2); }
+.dot.queued      { background: #c084fc; }
 .dot.downloading { background: var(--dl); animation: pulse 1s infinite; }
 .dot.done        { background: var(--done); }
 .dot.failed      { background: var(--fail); }
+.dot.scanning    { background: #c084fc; animation: pulse 1s infinite; }
+.dot.stopping    { background: #f7c948; animation: pulse 0.8s infinite; }
+.dot.cancelled   { background: #f59e0b; }
+.dot.cdnWaiting  { background: #f59e0b; animation: pulse 1.4s infinite; }
 
 .statusText {
   font-size: 0.72rem;
   color: var(--subtext);
   font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.speedBadge {
+  font-size: 0.68rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.activityMessage {
+  font-size: 0.65rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+  margin-top: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -130,13 +157,155 @@
 
 .btn:hover { background: var(--border); color: var(--text); }
 
-.btnDownload  {}
+.btnDownload  { background: transparent; border-color: var(--border); color: var(--subtext); }
+.btnDownload:hover { background: transparent; border-color: var(--muted); color: var(--text); }
 .btnGhost     {}
+.btnGhost:disabled { opacity: 0.3; pointer-events: none; }
+.btnStopping  { opacity: 0.35; pointer-events: none; animation: pulse 0.8s infinite; }
 .btnDanger    { color: var(--fail); border-color: var(--fail); }
 .btnDanger:hover { background: var(--fail); color: #fff; border-color: var(--fail); }
 .btnAccent    {}
+.btnLink      { text-decoration: none; }
+.btnLink:hover { color: var(--muted); border-color: var(--border); background: var(--border); }
+.btnSubs      { color: var(--subtext); }
+.btnSubs:hover { color: var(--accent2); border-color: var(--accent2); background: var(--panel); }
+.btnSubsActive { color: var(--accent2); border-color: var(--accent2); opacity: 0.6; }
+.btnSubsPending { color: var(--accent2); border-color: var(--accent2); animation: pulse 1s infinite; pointer-events: none; }
+.btnSubsWaiting { color: #f59e0b; border-color: #f59e0b; animation: pulse 1.4s infinite; pointer-events: none; }
+.btnSubsDone { color: var(--done); border-color: var(--done); pointer-events: none; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.spin { animation: spin 1s linear infinite; }
 .btnReport    { font-size: 0.85rem; }
 .btnReport:hover { color: var(--accent2); border-color: var(--accent2); background: var(--panel); }
+.btnReportActive { color: var(--accent2); border-color: var(--accent2); }
+
+/* Report panel */
+.reportPanel {
+  border-top: 1px solid var(--border);
+  padding: 8px 0 2px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reportSection {
+  display: flex;
+  gap: 10px;
+  font-size: 0.68rem;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+}
+
+.reportLabel {
+  color: var(--muted);
+  flex-shrink: 0;
+  width: 64px;
+  text-align: right;
+}
+
+.reportValue {
+  color: var(--subtext);
+}
+
+.reportError {
+  color: var(--fail);
+}
+
+.reportMuted {
+  color: var(--muted);
+}
+
+.reportPath {
+  word-break: break-all;
+}
+
+/* Reset confirmation */
+.confirmDialog {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding: 8px 4px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.confirmText {
+  font-size: 0.68rem;
+  color: var(--subtext);
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0 2px;
+}
+
+.confirmFilename {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.confirmBtns {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.confirmBtn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  padding: 3px 10px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--subtext);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.confirmBtn:hover { background: var(--border); color: var(--text); }
+
+.confirmBtnDanger {
+  color: var(--fail);
+  border-color: var(--fail);
+}
+
+.confirmBtnDanger:hover { background: var(--fail); color: #fff; }
+
+.resetChecks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 2px;
+}
+
+.resetCheck {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.resetCheck input[type='checkbox'] {
+  accent-color: var(--accent);
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.resetCheck span {
+  font-size: 0.68rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text);
+}
+
+.resetCheckDisabled {
+  color: var(--muted) !important;
+}
 
 /* Progress bar */
 .progressBar {
@@ -153,8 +322,6 @@
   border-radius: 0 2px 2px 0;
 }
 
-.card[data-status='done'] .progressFill    { background: var(--done); }
-.card[data-status='failed'] .progressFill  { background: var(--fail); }
 
 /* Error text */
 .errorText {

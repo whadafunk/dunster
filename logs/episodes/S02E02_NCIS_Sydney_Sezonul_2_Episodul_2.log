@@ -1,0 +1,187 @@
+[2026-03-29 16:48:59] [scraper] Loading episode: https://seriale-online.net/episoade/ncis-sydney-sezonul-2-episodul-2/
+[2026-03-29 16:49:03] [scraper] ============================================================
+[2026-03-29 16:49:03] [scraper] DIAGNOSTIC: https://seriale-online.net/episoade/ncis-sydney-sezonul-2-episodul-2/
+[2026-03-29 16:49:03] [scraper] ============================================================
+[2026-03-29 16:49:03] [scraper] ── IFRAMES (1) ──
+[2026-03-29 16:49:03] [scraper]   src='https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWdkpJZEMzK2RCUFlpOU5XUXg1UWFtdW5sTVF0Y1h2VWp6YWZXVHJYb3cxNXdDOHlVTA=='  data-src=None  class='metaframe rptss'
+[2026-03-29 16:49:03] [scraper] ── DATA-* ELEMENTS (0) ──
+[2026-03-29 16:49:03] [scraper] ── PLAYER-LIKE BUTTONS/TABS (30) ──
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-64' > 'Seriale'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-35401' > 'Filme Online'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-60' > 'Genuri'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-61' > 'Ani'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-post_type menu-item-object-page menu-item-58' > 'Trending'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-62' > 'Cereri'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69511' > 'Arrow'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69512' > 'Friends'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69513' > 'Game Of Thrones'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69514' > 'La Casa de Papel'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69515' > 'Legacies'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69516' > 'Lucifer'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69517' > 'Peaky Blinders'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69518' > 'Prison Break'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69519' > 'Riverdale'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69520' > 'See'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69521' > 'Shadowhunters'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69522' > 'Stranger Things'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69524' > 'Supernatural'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69525' > 'Teen Wolf'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69526' > 'The 100'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69527' > 'The Blacklist'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69528' > 'The Flash'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69529' > 'The Mandalorian'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69530' > 'The Mentalist'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69532' > 'The Originals'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69533' > 'The Vampire Diaries'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69534' > 'The Walking Dead'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69535' > 'The Witcher'
+[2026-03-29 16:49:03] [scraper]   <LI class='menu-item menu-item-type-custom menu-item-object-custom menu-item-69536' > 'Vikings'
+[2026-03-29 16:49:03] [scraper] ── INLINE SCRIPTS mentioning player/embed (1) ──
+[2026-03-29 16:49:03] [scraper]   Script 1: '\nvar dtGonza = {"api":"https:\\/\\/seriale-online.net\\/wp-json\\/dooplay\\/search\\/","glossary":"https:\\/\\/seriale-online.net\\/wp-json\\/dooplay\\/glossary\\/","nonce":"4b3d39a134","area":".live-search","button":".search-button","more":"View all results","mobile":"false","reset_all":"Really you want to res'
+[2026-03-29 16:49:03] [scraper] ── NETWORK REQUESTS to known hosters (0) ──
+[2026-03-29 16:49:03] [scraper] ── ALL NETWORK REQUESTS (405 total, showing document/xhr/fetch) ──
+[2026-03-29 16:49:03] [scraper]   [document] https://seriale-online.net/episoade/ncis-sydney-sezonul-2-episodul-2/
+[2026-03-29 16:49:03] [scraper]   [fetch] https://adexchangeclear.com/ad/czcf.php?cz=8t64fmfafs&atv=79.0&chu=%22Not%3AA-Brand%22%3Bv%3D99%2C%20%22HeadlessChrome%22%3Bv%3D145%2C%20%22Chromium%22%3Bv%3D145&chmob=%3F0&chp=macOS&chpv=10_15_7&chuafv=145.0.7632.6
+[2026-03-29 16:49:03] [scraper]   [document] https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWdkpJZEMzK2RCUFlpOU5XUXg1UWFtdW5sTVF0Y1h2VWp6YWZXVHJYb3cxNXdDOHlVTA==
+[2026-03-29 16:49:03] [scraper]   [fetch] https://adexchangeclear.com/video/slider.php?r=11049918&atv=79.0
+[2026-03-29 16:49:03] [scraper]   [document] https://cdn1.vidcdn.co/e/hGAc7phVntWq?adfree=1
+[2026-03-29 16:49:03] [scraper]   [fetch] https://adexchangeclear.com/script/suurl5.php?r=11049906&chu=%22Not%3AA-Brand%22%3Bv%3D99%2C%20%22HeadlessChrome%22%3Bv%3D145%2C%20%22Chromium%22%3Bv%3D145&chmob=%3F0&chp=macOS&chpv=10_15_7&chuafv=145.0.7632.6&atag=1&cbur=0.6311909769769211&cbiframe=0&cbWidth=1280&cbHeight=800&cbtitle=NCIS%3A%20Sydney%20Sezonul%202%20Episodul%202%20Online%20Subtitrat%20in%20Romana%20%7C%20Seriale%20Online&cbpage=https%3A%2F%2Fseriale-online.net%2Fepisoade%2Fncis-sydney-sezonul-2-episodul-2%2F&cbref=&cbdescription=Urmareste%20NCIS%3A%20Sydney%20Sezonul%202%20Episodul%202%20Online%20Subtitrat%20in%20Romana%20Gratis%20la%20cea%20mai%20buna%20calitate.%20Acest%20episod%20a%20avut%20premiera%20pe%20data%20de%3A%202025-02-14.&cbkeywords=&cbcdn=acscdn.com&ts=1774792140227&atv=79.0&ufp=MacIntel%2FMozilla%2FNetscape%2Ftrue%2Ffalse%2FGoogle%20Inc.1280x800-180en-US81224%20bits&srs=fc2b62852953674f5248c5b70ffb6218&btp=0.8&aggr=3&czid=8t64fmfafs&ppv=1
+[2026-03-29 16:49:03] [scraper]   [fetch] https://adexchangeclear.com/script/push.php?r=11049902&ipp=1&mads=2&position=top&czid=8t64fmfafs&atag=1&aggr=3&ppv=1&srs=fc2b62852953674f5248c5b70ffb6218&ufp=MacIntel%2FMozilla%2FNetscape%2Ftrue%2Ffalse%2FGoogle%20Inc.1280x800-180en-US81224%20bits&cbpage=https%3A%2F%2Fseriale-online.net%2Fepisoade%2Fncis-sydney-sezonul-2-episodul-2%2F&atv=79.0&cbref=&btp=0.8&chu=%22Not%3AA-Brand%22%3Bv%3D99%2C%20%22HeadlessChrome%22%3Bv%3D145%2C%20%22Chromium%22%3Bv%3D145&chmob=%3F0&chp=macOS&chpv=10_15_7&chuafv=145.0.7632.6
+[2026-03-29 16:49:03] [scraper]   [fetch] https://region1.analytics.google.com/g/collect?v=2&tid=G-4ECKR43ENR&gtm=45je63q0h2v9123892315za20g&_p=1774792139874&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&cid=1642899903.1774792140&ul=en-us&sr=1280x800&ir=1&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAIAGA&_s=1&tag_exp=0~115938466~115938469~117484252&sid=1774792140&sct=1&seg=0&dl=https%3A%2F%2Fseriale-online.net%2Fepisoade%2Fncis-sydney-sezonul-2-episodul-2%2F&dt=NCIS%3A%20Sydney%20Sezonul%202%20Episodul%202%20Online%20Subtitrat%20in%20Romana%20%7C%20Seriale%20Online&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1056
+[2026-03-29 16:49:03] [scraper]   [fetch] https://commentsmodule.com/js/js.load.1.js?1022618430796563
+[2026-03-29 16:49:03] [scraper]   [xhr] https://cdn1.vidcdn.co/cdn-cgi/trace
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/9kqrx0Y
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/y6PlqJ0
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/vqMZ3eB
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/xjMN773
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/qpG3rnP
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/xjMN773
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/EDnEq76
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/p1GylWa
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/EDnEq76
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/jyMjD2y
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/jyMjD2y
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/npM7jVe
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/9kqrx0Y
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/p1GylWa
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/p1GylQZ
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/vqMZ3eB
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/npM7jVe
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/p1GylQZ
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/y6PlqJ0
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/qpG3rnP
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/31VnlKy
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/sub/31VnlKy
+[2026-03-29 16:49:03] [scraper]   [xhr] https://cdn1.vidcdn.co/player/get_player_image.php
+[2026-03-29 16:49:03] [scraper]   [xhr] https://cdn1.vidcdn.co/cdn-cgi/challenge-platform/h/g/jsd/oneshot/ea2d291c0fdc/0.36707159097325237:1774424211:9_pSV23kWGmNtldQToc5YDBzJFUfKD8QS_h75YB-Zx0/9e3f55db49eae44d
+[2026-03-29 16:49:03] [scraper]   [fetch] https://dns.google/resolve?name=70.55.125.86.in-addr.arpa&type=PTR&cd=true
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.zeusadx.com/redirect?feed=845885&auth=NCyZ&pubid=224204
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.zeusadx.com/redirect?feed=845885&auth=NCyZ&pubid=224204
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.cachegorilla.com/redirect?feed=840889&auth=RmRQ&pubid=223867
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.xmlwolf.com/redirect?feed=840890&auth=di6u&pubid=223868
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.poprtb.com/redirect?feed=840878&auth=plYi&pubid=223863
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.xmlwiz.com/redirect?feed=840880&auth=XsHX&pubid=223866
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.revrtb.net/redirect?feed=845856&auth=YMS8&pubid=224201
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.popmonetizer.net/redirect?feed=845863&auth=9uKi&pubid=224202
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.xmlwolf.com/redirect?feed=840890&auth=di6u&pubid=223868
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.acertb.com/redirect?feed=845891&auth=Ftu9&pubid=224205
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.adxnexus.com/redirect?feed=845878&auth=I3hp&pubid=224203
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.xmlking.com/redirect?feed=840879&auth=PZOQ&pubid=223865
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.popviking.com/redirect?feed=845923&auth=XqqQ&pubid=224210
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.bigboxads.com/load
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.popmonetizer.net/redirect?feed=845863&auth=9uKi&pubid=224202
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.xmlking.com/redirect?feed=840879&auth=PZOQ&pubid=223865
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.cachegorilla.com/redirect?feed=840889&auth=RmRQ&pubid=223867
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.adxnexus.com/redirect?feed=845878&auth=I3hp&pubid=224203
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.revrtb.net/redirect?feed=845856&auth=YMS8&pubid=224201
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.acertb.com/redirect?feed=845891&auth=Ftu9&pubid=224205
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.popviking.com/redirect?feed=845923&auth=XqqQ&pubid=224210
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.xmlwiz.com/redirect?feed=840880&auth=XsHX&pubid=223866
+[2026-03-29 16:49:03] [scraper]   [document] https://xml.poprtb.com/redirect?feed=840878&auth=plYi&pubid=223863
+[2026-03-29 16:49:03] [scraper]   [document] https://pectationselea.info/redirect?tid=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://filter.acertb.com/filter?q=&i=HyJbVCztcvE_0&ci=8591742816920611457&t=842261212&h=1
+[2026-03-29 16:49:03] [scraper]   [document] https://sanynouncem.org/?K1vXQ=1205736
+[2026-03-29 16:49:03] [scraper]   [document] https://pectationselea.info/redirect?tid=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://onopolicycreatme.org/?GdwRk=1209517
+[2026-03-29 16:49:03] [scraper]   [document] https://pectationselea.info/redirect?tid=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://onopolicycreatme.org/?GdwRk=1209517
+[2026-03-29 16:49:03] [scraper]   [document] https://sanynouncem.org/?K1vXQ=1205736
+[2026-03-29 16:49:03] [scraper]   [document] https://sanynouncem.org/?K1vXQ=1205736
+[2026-03-29 16:49:03] [scraper]   [document] https://rtouchingthewaterw.com/?raF9e=1120537
+[2026-03-29 16:49:03] [scraper]   [document] https://filter.xmlwolf.com/filter?q=&i=7CxjZmWOCwo_0&ci=-3055155068877472766&t=1305675178&h=1
+[2026-03-29 16:49:03] [scraper]   [document] https://filter.thenetwork18.com/filter?q=&i=qgD8TlECqig_0&ci=4607267047103375473&t=116645870&h=1
+[2026-03-29 16:49:03] [scraper]   [document] https://tracking.prmtracking.com/click?pid=14&offer_id=2435930&sub1=3503673086275410620&sub2=1205736
+[2026-03-29 16:49:03] [scraper]   [document] https://wildbearads.go2affise.com/click?pid=355&offer_id=15147&sub1=6384387612329739475&sub2=1209517
+[2026-03-29 16:49:03] [scraper]   [document] https://hk.jayantwhaling.shop/ikV2WeUjBuM5/oWegJ?param_4=1120537&param_5=188886591182015949
+[2026-03-29 16:49:03] [scraper]   [document] https://argyrosisdiffluencejusten.forum/mlrxO7364a9d18f2e50e235fec08a948d90fdec3be91b?q=FIle_setup&s1=355_1209517&s3=69c92dcefcef4f0001889e31
+[2026-03-29 16:49:03] [scraper]   [document] https://bongacams11.com/track?c=830727&subid=618765653128632495&subid2=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://net.geo.opera.com/opera/stable/mac?utm_source=PRIMEROLL&utm_medium=pb&utm_campaign=OPERA&utm_content=14_1205736&utm_id=69c92dce47df10000143780d
+[2026-03-29 16:49:03] [scraper]   [document] https://tracking.prmtracking.com/click?pid=14&offer_id=2435930&sub1=8439780856235123437&sub2=1205736
+[2026-03-29 16:49:03] [scraper]   [document] https://xml-v4.acertb.com/click2?i=HyJbVCztcvE_0&ci=8591742816920611457&j=rv%3Db%26ss%3D1280x800%26ws%3D1920x1080%26wp%3D0x0%26ce%3D0%26ck%3Djc%26cv%3D5508%26cs%3D0%26fr%3D1%26hc%3D0%26fl%3Dnull%26jv%3Dnull%26sc%3D24%26hr%3D2%26rf%3Dxml.bigboxads.com%26lo%3Dfilter.acertb.com%26mb%3D0%26hb%3D1%26pl%3DMacIntel%26ua%3DMozilla%252F5.0%2B%28Macintosh%253B%2BIntel%2BMac%2BOS%2BX%2B10_15_7%29%2BAppleWebKit%252F537.36%2B%28KHTML%252C%2Blike%2BGecko%29%2BChrome%252F122.0.0.0%2BSafari%252F537.36%26nd%3D2%26to%3Dhttps%253A%252F%252Fseriale-online.net%26wbd%3D1%26wbde%3D0%26sqm%3D0%26phj%3D0%26nmj%3D0%26sln%3D0%26es%3D0%26ln%3Den-US%26lnl%3D1%26hsc%3D0%26frc%3D0%26dbt%3D0%26prb%3D20030107%26tz%3D-180%26hid%3D0%26mq%3D1%26my%3D8%26geo%3D1%26thx%3D0%26the%3D0%26ths%3D0%26cpc%3D%26ocp%3D%26hwc%3D12%26hrl%3D%26acd%3Dpppmp%26vcd%3Dnpp%26pal%3D0%26pai%3D1%26pli%3D%26win%3D1920x1080%26wout%3D1280x800%26wpof%3D0x0%26bcld%3D1904x18%26scrp%3D0x0%26scrad%3D1280x800%26spd%3D24%26pxr%3D1%26sck%3D1%26ckl%3D0%26sls%3D1%26sss%3D1%26six%3D1%26sdb%3D0%26vvr%3DGoogle%2BInc.%2B%28Google%29%26vrd%3DANGLE%2B%28Google%252C%2BVulkan%2B1.3.0%2B%28SwiftShader%2BDevice%2B%28LLVM%2B10.0.0%29%2B%280x0000C0DE%29%29%252C%2BSwiftShader%2Bdriver%29%26pnt%3Dprompt%26bch%3D1%26blv%3D1%26cnvs%3D80808080%26mmd_ao%3D1%26mmd_ai%3D1%26mmd_vi%3D1
+[2026-03-29 16:49:03] [scraper]   [document] https://xml-v4.xmlwolf.com/click2?i=7CxjZmWOCwo_0&ci=-3055155068877472766&j=rv%3Db%26ss%3D1280x800%26ws%3D1920x1080%26wp%3D0x0%26ce%3D0%26ck%3Djc%26cv%3D1990%26cs%3D0%26fr%3D1%26hc%3D0%26fl%3Dnull%26jv%3Dnull%26sc%3D24%26hr%3D2%26rf%3Dxml.bigboxads.com%26lo%3Dfilter.xmlwolf.com%26mb%3D0%26hb%3D1%26pl%3DMacIntel%26ua%3DMozilla%252F5.0%2B%28Macintosh%253B%2BIntel%2BMac%2BOS%2BX%2B10_15_7%29%2BAppleWebKit%252F537.36%2B%28KHTML%252C%2Blike%2BGecko%29%2BChrome%252F122.0.0.0%2BSafari%252F537.36%26nd%3D2%26to%3Dhttps%253A%252F%252Fseriale-online.net%26wbd%3D1%26wbde%3D0%26sqm%3D0%26phj%3D0%26nmj%3D0%26sln%3D0%26es%3D0%26ln%3Den-US%26lnl%3D1%26hsc%3D0%26frc%3D0%26dbt%3D0%26prb%3D20030107%26tz%3D-180%26hid%3D0%26mq%3D1%26my%3D8%26geo%3D1%26thx%3D0%26the%3D0%26ths%3D0%26cpc%3D%26ocp%3D%26hwc%3D12%26hrl%3D%26acd%3Dpppmp%26vcd%3Dnpp%26pal%3D0%26pai%3D1%26pli%3D%26win%3D1920x1080%26wout%3D1280x800%26wpof%3D0x0%26bcld%3D1904x18%26scrp%3D0x0%26scrad%3D1280x800%26spd%3D24%26pxr%3D1%26sck%3D1%26ckl%3D0%26sls%3D1%26sss%3D1%26six%3D1%26sdb%3D0%26vvr%3DGoogle%2BInc.%2B%28Google%29%26vrd%3DANGLE%2B%28Google%252C%2BVulkan%2B1.3.0%2B%28SwiftShader%2BDevice%2B%28LLVM%2B10.0.0%29%2B%280x0000C0DE%29%29%252C%2BSwiftShader%2Bdriver%29%26pnt%3Dprompt%26bch%3D1%26blv%3D1%26cnvs%3D80808080%26mmd_ao%3D1%26mmd_ai%3D1%26mmd_vi%3D1
+[2026-03-29 16:49:03] [scraper]   [document] https://bngtrak.com/hit.php?c=830727&subid=618765653128632495&subid2=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://net.geo.opera.com/opera/stable/mac?utm_source=PRIMEROLL&utm_medium=pb&utm_campaign=OPERA&utm_content=14_1205736&utm_id=69c92dce2dc5930001b85a70
+[2026-03-29 16:49:03] [scraper]   [fetch] https://fondleaegipan.shop/cuid/?f=https%3A%2F%2Fhk.jayantwhaling.shop
+[2026-03-29 16:49:03] [scraper]   [document] https://brandshapers.gotrackier.io/click?campaign_id=2386&pub_id=88&p1=3326730477195487596&source=1209517
+[2026-03-29 16:49:03] [scraper]   [document] https://bongacams.com/?bcs=d25mbzhiZmVmOWRkNjU1ZGY4NjdkNWYyNWZjY2E0MWYwODY1OjoyODUxMzU6Ojo6NjE4NzY1NjUzMTI4NjMyNDk1OjoxMTIwNTM1Ojo4MzA3Mjc6OjA6OjA6OjA6Ojo6MDo6ZGVmYXVsdDo6MA~~
+[2026-03-29 16:49:03] [scraper]   [document] https://nebulasyncforge3.lat/?c=AM8tyWnfdgUAd4oCAFJPOQASAAAAAAB2
+[2026-03-29 16:49:03] [scraper]   [document] https://xml-v4.thenetwork18.com/click2?i=qgD8TlECqig_0&ci=4607267047103375473&j=rv%3Db%26ss%3D1280x800%26ws%3D1920x1080%26wp%3D0x0%26ce%3D0%26ck%3Djc%26cv%3D5967%26cs%3D0%26fr%3D1%26hc%3D0%26fl%3Dnull%26jv%3Dnull%26sc%3D24%26hr%3D2%26rf%3Dxml.bigboxads.com%26lo%3Dfilter.thenetwork18.com%26mb%3D0%26hb%3D1%26pl%3DMacIntel%26ua%3DMozilla%252F5.0%2B%28Macintosh%253B%2BIntel%2BMac%2BOS%2BX%2B10_15_7%29%2BAppleWebKit%252F537.36%2B%28KHTML%252C%2Blike%2BGecko%29%2BChrome%252F122.0.0.0%2BSafari%252F537.36%26nd%3D2%26to%3Dhttps%253A%252F%252Fseriale-online.net%26wbd%3D1%26wbde%3D0%26sqm%3D0%26phj%3D0%26nmj%3D0%26sln%3D0%26es%3D0%26ln%3Den-US%26lnl%3D1%26hsc%3D0%26frc%3D0%26dbt%3D0%26prb%3D20030107%26tz%3D-180%26hid%3D0%26mq%3D1%26my%3D8%26geo%3D1%26thx%3D0%26the%3D0%26ths%3D0%26cpc%3D%26ocp%3D%26hwc%3D12%26hrl%3D%26acd%3Dpppmp%26vcd%3Dnpp%26pal%3D0%26pai%3D1%26pli%3D%26win%3D1920x1080%26wout%3D1280x800%26wpof%3D0x0%26bcld%3D1904x18%26scrp%3D0x0%26scrad%3D1280x800%26spd%3D24%26pxr%3D1%26sck%3D1%26ckl%3D0%26sls%3D1%26sss%3D1%26six%3D1%26sdb%3D0%26vvr%3DGoogle%2BInc.%2B%28Google%29%26vrd%3DANGLE%2B%28Google%252C%2BVulkan%2B1.3.0%2B%28SwiftShader%2BDevice%2B%28LLVM%2B10.0.0%29%2B%280x0000C0DE%29%29%252C%2BSwiftShader%2Bdriver%29%26pnt%3Dprompt%26bch%3D1%26blv%3D1%26mmd_ao%3D1%26mmd_ai%3D1%26mmd_vi%3D1%26cnvs%3D80808080
+[2026-03-29 16:49:03] [scraper]   [document] https://a.throughlnk.com/goto/?utm_source=wrtzr&utm_medium=master_cb&subID2=861831&clickID=69c92dcf473cf9034b1aacaa&subID3=88&subID4=1209517
+[2026-03-29 16:49:03] [scraper]   [document] https://hubrtb.com/script/s2iurl.php?stamat=m%7C%2C%2CQiYr9iL-oGU3B0_GH0dEdHP3xP.096%2Cc7TmjaHxdKq-sJmxdrzh1vT2weP8C46eCmvSUT7tPWBkzkuk6JPFU9-2rodNRnkhgxA8ae7HRmSJ5GZdFb3JmzV9v_JcK2bMJ0seVuxm4hzw1ZrGpeiWE_b5Fti24ZDARkFD70Qsw03kHFrhpXSVb1HMUYyNv_81fa1g1D7rlpy2oCM0JHwqYQLAyAzp5y4pUHWmUT7hdYCQ2XZM7dTqK1U-dfIc4Qx2j5kXlKJFWWvBIA3OAymPZcQCHLLTywhmm52fzxI_D_cHtWV0J756aPF8SR5gJpWTyh0Y2gEy4gmQMtJn7d6V1j4UlT0cOFh7YhWY3H7-tx90uiSgwr5_KZ8nsho_3B2O2nE0MkkARrSlZ0711mM2GaZQ84YwJivnOYq59iECsmSfN_pHEM0wRBHyyAkcbKzPDCOs2b9uF_VSXtjCQAacSCtKlZdBv8swtuVYucFJdVUrwXZMKk2CTLAwBq7LbN6ekfPum6s6WUolsDJsCGrZ7-GNf4ZxzWVLvm78L07L3QsBJSEUuG2b8QdAbHb9Jij8mr6AXPD3jXDifJsawGpnB7Riq0eNyzn_DXjOgRia01J1FRLoo0f4HFIGxRa83sHigVKFbluctfhNHAdEm5HFQ0ScHm69l8qe9jIP4pcwZWu50g6NyhBOmKN7gjj7ylI2GuW-xgvi2sjDypM8HPlWiS8P5ZK_o69tKdZoA6MsXdak5Ktpmx7wlvOAUeI2STllIMyJJvHQFgGqZ2NEC8y24CZOcjWB-64_ItCkIu-A8bhapGs02g8R-Ep3f99Kc4fdMqILhd93bMoFChwtyjslvHWWEDU1HwkCB_eaJ8ivy2fsMB9wurXceKrO3GUPm4pW7EfjKM_rpDo%2C&csid=5841470&s1=1205736&md=1
+[2026-03-29 16:49:03] [scraper]   [document] https://bongacams11.com/track?c=830727&subid=8104996046803382172&subid2=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://bngtrak.com/hit.php?c=830727&subid=8104996046803382172&subid2=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://bongacams.com/?bcs=cmlvZDhiZmVmOWRkNjU1ZGY4NjdkNWYyNWZjY2E0MWYwODY1OjoyODUxMzU6Ojo6ODEwNDk5NjA0NjgwMzM4MjE3Mjo6MTEyMDUzNTo6ODMwNzI3OjowOjowOjowOjo6OjA6OmRlZmF1bHQ6OjA~
+[2026-03-29 16:49:03] [scraper]   [document] https://ukuleqasforsalesre.com/?XFdqw=1247690
+[2026-03-29 16:49:03] [scraper]   [document] https://rtouchingthewaterw.com/?E9I1s=1237560
+[2026-03-29 16:49:03] [scraper]   [document] https://hubrtb.com/script/s2iurl.php?stamat=m%7C%2C%2CQiYr9iL-oGU3B0_GH0dEdHP3xP.096%2Cc7TmjaHxdKq-sJmxdrzh1vT2weP8C46eCmvSUT7tPWBkzkuk6JPFU9-2rodNRnkhgxA8ae7HRmSJ5GZdFb3JmzV9v_JcK2bMJ0seVuxm4hzw1ZrGpeiWE_b5Fti24ZDARkFD70Qsw03kHFrhpXSVb1HMUYyNv_81fa1g1D7rlpy2oCM0JHwqYQLAyAzp5y4pUHWmUT7hdYCQ2XZM7dTqK1U-dfIc4Qx2j5kXlKJFWWvBIA3OAymPZcQCHLLTywhmm52fzxI_D_cHtWV0J756aPF8SR5gJpWTyh0Y2gEy4gmQMtJn7d6V1j4UlT0cOFh7YhWY3H7-tx90uiSgwr5_KZ8nsho_3B2O2nE0MkkARrSlZ0711mM2GaZQ84YwJivnOYq59iECsmSfN_pHEM0wRBHyyAkcbKzPDCOs2b9uF_VSXtjCQAacSCtKlZdBv8swtuVYucFJdVUrwXZMKk2CTLAwBq7LbN6ekfPum6s6WUolsDJsCGrZ7-GNf4ZxzWVLvm78L07L3QsBJSEUuG2b8QdAbHb9Jij8mr6AXPD3jXDifJsawGpnB7Riq0eNyzn_DXjOgRia01J1FRLoo0f4HFIGxRa83sHigVKFbluctfhNHAdEm5HFQ0ScHm69l8qe9jIP4pcwZWu50g6NyhBOmKN7gjj7ylI2GuW-xgvi2sjDypM8HPlWiS8P5ZK_o69tKdZoA6MsXdak5Ktpmx7wlvOAUeI2STllIMyJJvHQFgGqZ2NEC8y24CZOcjWB-64_ItCkIu-A8bhapGs02g8R-Ep3f99Kc4fdMqILhd93bMoFChwtyjslvHWWEDU1HwkCB_eaJ8ivy2fsMB9wurXceKrO3GUPm4pW7EfjKM_rpDo%2C&csid=5841470&s1=1205736&md=1&treqn=42346345&rpn=1&cbrandom=0.018666100546951614&cbtitle=&cbiframe=1&cbWidth=1920&cbHeight=1080&cbdescription=&cbkeywords=&cbref=
+[2026-03-29 16:49:03] [scraper]   [document] https://bongacams11.com/track?c=830727&subid=6149846109159030136&subid2=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://bngtrak.com/hit.php?c=830727&subid=6149846109159030136&subid2=1120535
+[2026-03-29 16:49:03] [scraper]   [document] https://nebulasyncforge3.lat/?c=AM8tyWnfdgUAd4oCAFJPOQASAAAAAAB2
+[2026-03-29 16:49:03] [scraper]   [document] https://bongacams.com/?bcs=aWNhbDhiZmVmOWRkNjU1ZGY4NjdkNWYyNWZjY2E0MWYwODY1OjoyODUxMzU6Ojo6NjE0OTg0NjEwOTE1OTAzMDEzNjo6MTEyMDUzNTo6ODMwNzI3OjowOjowOjowOjo6OjA6OmRlZmF1bHQ6OjA~
+[2026-03-29 16:49:03] [scraper]   [document] https://edge.inspoloji.com/c/47f967da-8316-4d5f-940c-882bbbdcf06a?clickid=177479214310005TROTV414510467264Vceb2a&redirection_cost=&browser=Chrome&lang=EN&platform=macOS&platform_version=10.15.7&country=RO&region=Bucuresti&campaign=434318820&zone=5841470-2800444567-0&ban=23943318
+[2026-03-29 16:49:03] [scraper] ============================================================
+[2026-03-29 16:49:03] [scraper] First-hop iframes: {'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWdkpJZEMzK2RCUFlpOU5XUXg1UWFtdW5sTVF0Y1h2VWp6YWZXVHJYb3cxNXdDOHlVTA==': '', 'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWbktKOVNrS1FNUGRqT1pHODUxUnZoK2pRUVFzRVg0UmlBTHV1SWdYQWtuTlZQcFNWTVlHTVF6Zz09': 'VideoVard', 'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWbExweFRqcjhSTnB1UFpDMXA1QnJiOHo0RUQ1VVg2UmllTHFuWXNHY0xrTlpKc21nU1lHc1FnWUo4': 'Doodstream', 'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWeU5ZRlNuS1lRTWRqT1pHODUxUnZoK2pRUVFzRVg0UmlBTHV1SWdYQWtuTlZQcFNWTVlHTVF6Zz09': 'Streamsb'}
+[2026-03-29 16:49:04] [scraper] Found 0 potential tab/button elements
+[2026-03-29 16:49:04] [scraper] All first-hop URLs to follow: {'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWdkpJZEMzK2RCUFlpOU5XUXg1UWFtdW5sTVF0Y1h2VWp6YWZXVHJYb3cxNXdDOHlVTA==': '', 'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWbktKOVNrS1FNUGRqT1pHODUxUnZoK2pRUVFzRVg0UmlBTHV1SWdYQWtuTlZQcFNWTVlHTVF6Zz09': 'VideoVard', 'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWbExweFRqcjhSTnB1UFpDMXA1QnJiOHo0RUQ1VVg2UmllTHFuWXNHY0xrTlpKc21nU1lHc1FnWUo4': 'Doodstream', 'https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oNzVha29ucm1weElWeU5ZRlNuS1lRTWRqT1pHODUxUnZoK2pRUVFzRVg0UmlBTHV1SWdYQWtuTlZQcFNWTVlHTVF6Zz09': 'Streamsb'}
+[2026-03-29 16:49:04] [scraper] Following hop: https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oN
+[2026-03-29 16:49:04] [scraper] → https://cdn1.vidcdn.co/e/hGAc7phVntWq?adfree=1
+[2026-03-29 16:49:04] [scraper] source: [Streamsb] https://cdn1.vidcdn.co/e/hGAc7phVntWq?adfree=1
+[2026-03-29 16:49:04] [scraper] Following hop: https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oN
+[2026-03-29 16:49:04] [scraper] → https://f16px.com/e/ytgrm4zpnrol?c1_file=https://seriale-online.net/subtitrari/1
+[2026-03-29 16:49:11] [scraper] [f16px] m3u8: https://edge1-waw-sprintcdn.r66nv9ed.com/hls2/02/08270/ltdqxz8iezq7_x/master.m3u8?t=sHDuZadIHWaW7DkI
+[2026-03-29 16:49:11] [scraper] f16px stream: https://edge1-waw-sprintcdn.r66nv9ed.com/hls2/02/08270/ltdqxz8iezq7_x/master.m3u
+[2026-03-29 16:49:11] [scraper] Following hop: https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oN
+[2026-03-29 16:49:11] [scraper] → https://myvidplay.com/e/qu8dciv7bqb3?c1_file=https://seriale-online.net/subtitra
+[2026-03-29 16:49:11] [scraper] doodstream embed: https://myvidplay.com/e/qu8dciv7bqb3
+[2026-03-29 16:49:11] [scraper] Following hop: https://database.seriale-online.net/iframe/OGJSK0tXYjlIMVJSNDRwMnUvcTcxb0c3YW9oN
+[2026-03-29 16:49:12] [scraper] → https://vidload.co/embed/ef823b6e83a37ae6f323326e2f3bddb7
+[2026-03-29 16:49:12] [scraper] source: [vidload (Streamsb)] https://vidload.co/embed/ef823b6e83a37ae6f323326e2f3bddb7
+[2026-03-29 16:49:12] [scraper] Episode sources found: 4
+[2026-03-29 16:49:12] [scraper]   1. [f16px (VideoVard)] https://edge1-waw-sprintcdn.r66nv9ed.com/hls2/02/08270/ltdqxz8iezq7_x/master.m3u8?t=sHDuZadIHWaW7DkIjblfqOeeV7XxQRS0prQnQ6ZylfM&s=1774792145&e=10800&f=43754373&srv=1050&asn=8708&sp=5500&p=0
+[2026-03-29 16:49:12] [scraper]   2. [myvidplay (Doodstream)] https://myvidplay.com/e/qu8dciv7bqb3
+[2026-03-29 16:49:12] [scraper]   3. [vidload (Streamsb)] https://vidload.co/embed/ef823b6e83a37ae6f323326e2f3bddb7
+[2026-03-29 16:49:12] [scraper]   4. [Streamsb] https://cdn1.vidcdn.co/e/hGAc7phVntWq?adfree=1
+[2026-03-29 16:49:12] Download started: 'NCIS: Sydney Sezonul 2 Episodul 2' — 4 source(s)
+[2026-03-29 16:49:12] Trying source 1/4: f16px (VideoVard)
+[2026-03-29 16:52:59] SUCCESS via 'f16px (VideoVard)' — 1363 MB in 227s

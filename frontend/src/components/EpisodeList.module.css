@@ -124,18 +124,22 @@
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   transition: background 0.15s, color 0.15s, transform 0.1s, box-shadow 0.15s;
   white-space: nowrap;
 }
 
-.btnAccent  { background: var(--accent);  color: #0d0f11; }
-.btnAccent2 { background: var(--accent2); color: #0d0f11; }
-.btnGhost   { background: var(--panel); color: var(--subtext); border: 1px solid var(--border); }
-.btnScanning { background: var(--panel); color: var(--accent2); border: 1px solid var(--accent2); opacity: 0.8; cursor: default; animation: pulse 1.2s ease-in-out infinite; }
+.btnAccent  { background: transparent; color: var(--subtext); border: 1px solid var(--border); }
+.btnAccent2 { background: transparent; color: var(--subtext); border: 1px solid var(--border); }
+.btnGhost   { background: transparent; color: var(--subtext); border: 1px solid var(--border); }
+.btnScanning { background: transparent; color: var(--accent2); border: 1px solid var(--accent2); opacity: 0.8; cursor: default; animation: pulse 1.2s ease-in-out infinite; }
 
-.btnAccent:hover  { background: #f0ff70; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(232,255,71,0.35); }
-.btnAccent2:hover { background: #6fd6ff; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(71,200,255,0.35); }
-.btnGhost:hover   { background: var(--border); color: var(--text); border-color: var(--subtext); transform: translateY(-1px); }
+.btnAccent:not(:disabled):hover  { border-color: var(--muted); color: var(--text); }
+.btnAccent2:not(:disabled):hover { border-color: var(--muted); color: var(--text); }
+.btnGhost:not(:disabled):hover   { border-color: var(--muted); color: var(--text); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .actionSpacer { flex: 1; }
 
@@ -194,6 +198,57 @@
 }
 
 .selectionBtn:hover { color: var(--text); }
+
+/* ── Prompt bar (warnings / confirmations) ── */
+.promptBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 24px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.promptText {
+  font-size: 0.75rem;
+  color: var(--subtext);
+  font-family: 'JetBrains Mono', monospace;
+  flex: 1;
+}
+
+.promptCheck {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--subtext);
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.promptCheck input { accent-color: var(--accent); cursor: pointer; }
+
+.promptBtn {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--panel);
+  color: var(--subtext);
+  padding: 4px 12px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.promptBtn:hover { background: var(--border); color: var(--text); }
+
+.promptBtnDanger { color: var(--fail); border-color: var(--fail); }
+.promptBtnDanger:hover { background: var(--fail); color: #fff; }
 
 /* ── Scroll area ── */
 .scroll {

@@ -1,0 +1,56 @@
+services:
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - ./data/redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  api:
+    image: routerology/dunster:latest
+    restart: unless-stopped
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/downloads:/downloads
+      - ./data/db:/app/db
+      - ./data/logs:/app/logs
+    environment:
+      REDIS_HOST: redis
+      DOWNLOAD_DIR: /downloads
+      DB_PATH: /app/db/streamgrabber.db
+      LOG_DIR: /app/logs
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/status"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  worker:
+    image: routerology/dunster:latest
+    restart: unless-stopped
+    command: arq worker.WorkerSettings
+    volumes:
+      - ./data/downloads:/downloads
+      - ./data/db:/app/db
+      - ./data/logs:/app/logs
+    environment:
+      REDIS_HOST: redis
+      DOWNLOAD_DIR: /downloads
+      DB_PATH: /app/db/streamgrabber.db
+      LOG_DIR: /app/logs
+      MAX_CONCURRENT: "2"
+    depends_on:
+      redis:
+        condition: service_healthy
+      api:
+        condition: service_healthy

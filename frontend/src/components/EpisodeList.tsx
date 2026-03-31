@@ -1,17 +1,53 @@
 import { useEffect, useState } from 'react'
+import { Download } from 'lucide-react'
 import { useShallow } from 'zustand/react/shallow'
 import { useStore, useTabCounts, useFilteredEpisodeIds } from '../store'
 import { SeasonGroup } from './SeasonGroup'
+import { EpisodeCard } from './EpisodeCard'
 import type { Episode } from '../api/types'
 import type { FilterTab } from '../api/types'
 import s from './EpisodeList.module.css'
 
+// ── Per-show UI persistence ──────────────────────────────────────────────────
+// Stored in localStorage as: { [showId]: { filter, expanded: { [tab]: number[] } } }
+const UI_KEY = 'sg_show_ui'
+
+function readUi(showId: number): { filter: FilterTab; expanded: Record<string, number[]> } {
+  try {
+    const all = JSON.parse(localStorage.getItem(UI_KEY) || '{}')
+    const s = all[String(showId)] ?? {}
+    return { filter: s.filter ?? 'all', expanded: s.expanded ?? {} }
+  } catch {
+    return { filter: 'all', expanded: {} }
+  }
+}
+
+function writeUiFilter(showId: number, filter: FilterTab) {
+  try {
+    const all = JSON.parse(localStorage.getItem(UI_KEY) || '{}')
+    const key = String(showId)
+    all[key] = { ...(all[key] ?? {}), filter }
+    localStorage.setItem(UI_KEY, JSON.stringify(all))
+  } catch {}
+}
+
+function writeUiExpanded(showId: number, filter: FilterTab, expanded: Set<number>) {
+  try {
+    const all = JSON.parse(localStorage.getItem(UI_KEY) || '{}')
+    const key = String(showId)
+    const prev = all[key] ?? {}
+    all[key] = { ...prev, expanded: { ...(prev.expanded ?? {}), [filter]: [...expanded] } }
+    localStorage.setItem(UI_KEY, JSON.stringify(all))
+  } catch {}
+}
+
 const TABS: { label: string; value: FilterTab }[] = [
-  { label: 'All',         value: 'all' },
+  { label: 'All',        value: 'all' },
   { label: 'Not Started', value: 'not_started' },
-  { label: 'Pending',     value: 'pending' },
-  { label: 'Done',        value: 'done' },
-  { label: 'Failed',      value: 'failed' },
+  { label: 'Pending',    value: 'pending' },
+  { label: 'Incomplete', value: 'incomplete' },
+  { label: 'Done',       value: 'done' },
+  { label: 'Failed',     value: 'failed' },
 ]
 
 function cleanTitle(raw: string): string {
@@ -38,7 +74,8 @@ export function EpisodeList() {
   const {
     activeShowId, shows, episodes, filter, selectedIds,
     setFilter, selectAll, clearSelected,
-    downloadEpisodes, loadEpisodes, loadShows, rescanEpisodes, rediscoverEpisodes,
+    downloadEpisodes, downloadSubsOnly, removeEpisodes, resetEpisode,
+    loadEpisodes, loadShows, rescanEpisodes, rediscoverEpisodes,
   } = useStore(useShallow(state => ({
     activeShowId:        state.activeShowId,
     shows:               state.shows,
@@ -49,6 +86,9 @@ export function EpisodeList() {
     selectAll:           state.selectAll,
     clearSelected:       state.clearSelected,
     downloadEpisodes:    state.downloadEpisodes,
+    downloadSubsOnly:    state.downloadSubsOnly,
+    removeEpisodes:      state.removeEpisodes,
+    resetEpisode:        state.resetEpisode,
     loadEpisodes:        state.loadEpisodes,
     loadShows:           state.loadShows,
     rescanEpisodes:      state.rescanEpisodes,
@@ -58,31 +98,67 @@ export function EpisodeList() {
   const counts = useTabCounts()
   const filteredIds = useFilteredEpisodeIds(filter)
 
+
   const [expandedSeasons, setExpandedSeasons] = useState<Set<number>>(new Set())
-  const [rescanning, setRescanning] = useState(false)
   const [rediscovering, setRediscovering] = useState(false)
 
-  // When episodes load, expand all seasons by default
+  type Prompt =
+    | { kind: 'remove-warn' }
+    | { kind: 'remove-confirm'; deleteFiles: boolean }
+    | { kind: 'reset-warn' }
+    | { kind: 'reset-confirm'; deleteFiles: boolean }
+  const [prompt, setPrompt] = useState<Prompt | null>(null)
+  // Track which show's UI has been initialized so we restore exactly once per show visit
+  const [initializedShowId, setInitializedShowId] = useState<number | null>(null)
+
+  // Restore saved filter + expanded seasons once episodes are available for the show
   useEffect(() => {
-    const seasonNums = new Set(episodes.map(e => e.season))
-    setExpandedSeasons(seasonNums)
-  }, [activeShowId]) // eslint-disable-line react-hooks/exhaustive-deps
+    if (!activeShowId || episodes.length === 0) return
+    if (initializedShowId === activeShowId) return
+    const ui = readUi(activeShowId)
+    setFilter(ui.filter)
+    const saved = ui.expanded[ui.filter]
+    setExpandedSeasons(saved !== undefined
+      ? new Set(saved)
+      : new Set(episodes.map(e => e.season))
+    )
+    setInitializedShowId(activeShowId)
+  }, [activeShowId, episodes.length, initializedShowId]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  function handleTabClick(tab: FilterTab) {
+    setFilter(tab)
+    if (!activeShowId) return
+    writeUiFilter(activeShowId, tab)
+    const ui = readUi(activeShowId)
+    const saved = ui.expanded[tab]
+    setExpandedSeasons(saved !== undefined
+      ? new Set(saved)
+      : new Set(episodes.map(e => e.season))
+    )
+  }
 
   function toggleSeason(season: number) {
     setExpandedSeasons(prev => {
       const next = new Set(prev)
       next.has(season) ? next.delete(season) : next.add(season)
+      if (activeShowId) writeUiExpanded(activeShowId, filter, next)
       return next
     })
   }
 
   function expandAll() {
-    setExpandedSeasons(new Set(Object.keys(seasons).map(Number)))
+    const next = new Set(Object.keys(seasons).map(Number))
+    setExpandedSeasons(next)
+    if (activeShowId) writeUiExpanded(activeShowId, filter, next)
   }
 
   function collapseAll() {
     setExpandedSeasons(new Set())
+    if (activeShowId) writeUiExpanded(activeShowId, filter, new Set())
   }
+
+  // Dismiss prompt when selection or filter changes
+  useEffect(() => { setPrompt(null) }, [selectedIds.size, filter])
 
   // Periodic refresh
   useEffect(() => {
@@ -103,6 +179,7 @@ export function EpisodeList() {
 
   const show = shows.find(sh => sh.id === activeShowId)
 
+  const flatView = filter === 'pending' || filter === 'incomplete' || filter === 'failed'
   const filteredEps = episodes.filter(ep => filteredIds.includes(ep.id))
   const seasons = filteredEps.reduce<Record<number, number[]>>((acc, ep) => {
     if (!acc[ep.season]) acc[ep.season] = []
@@ -118,6 +195,7 @@ export function EpisodeList() {
 
   function handleDownloadSelected() {
     downloadEpisodes([...selectedIds])
+    clearSelected()
   }
 
   function handleDownloadAll() {
@@ -125,6 +203,56 @@ export function EpisodeList() {
       .filter((ep: Episode) => ep.status !== 'done')
       .map((ep: Episode) => ep.id)
     downloadEpisodes(ids)
+  }
+
+  function handleDownloadSubsSelected() {
+    const ids = [...selectedIds].filter(id => {
+      const ep = episodes.find(e => e.id === id)
+      return ep && !['queued', 'downloading', 'cancelling'].includes(ep.status)
+        && ep.subtitle_status !== 'pending' && !ep.subtitle_langs
+    })
+    ids.forEach(id => downloadSubsOnly(id))
+    clearSelected()
+  }
+
+  const selectedSubsCount = [...selectedIds].filter(id => {
+    const ep = episodes.find(e => e.id === id)
+    return ep && !['queued', 'downloading', 'cancelling'].includes(ep.status)
+      && ep.subtitle_status !== 'pending' && !ep.subtitle_langs
+  }).length
+
+  // Episode selection categories for Remove / Reset
+  const selectedEps = episodes.filter(ep => selectedIds.has(ep.id))
+  const notStartedSelected  = selectedEps.filter(ep => ep.status === 'pending')
+  const removableSelected   = selectedEps.filter(ep => ['done', 'cancelled', 'failed'].includes(ep.status))
+  const resettableSelected  = selectedEps.filter(ep => ['done', 'cancelled', 'failed'].includes(ep.status))
+
+  const canRemove = removableSelected.length > 0
+  const canReset  = filter !== 'not_started' && filter !== 'pending' && resettableSelected.length > 0
+
+  function handleRemoveClick() {
+    if (notStartedSelected.length > 0) { setPrompt({ kind: 'remove-warn' }); return }
+    setPrompt({ kind: 'remove-confirm', deleteFiles: false })
+  }
+
+  function handleResetClick() {
+    if (notStartedSelected.length > 0) { setPrompt({ kind: 'reset-warn' }); return }
+    setPrompt({ kind: 'reset-confirm', deleteFiles: false })
+  }
+
+  async function doRemove(deleteFiles: boolean) {
+    await removeEpisodes(removableSelected.map(ep => ep.id), deleteFiles)
+    setPrompt(null)
+  }
+
+  async function doReset(deleteFiles: boolean) {
+    await Promise.all(
+      resettableSelected.map(ep =>
+        resetEpisode(ep.id, { deleteTemp: true, deleteLog: true, deleteFile: deleteFiles })
+      )
+    )
+    clearSelected()
+    setPrompt(null)
   }
 
   return (
@@ -162,7 +290,7 @@ export function EpisodeList() {
             <button
               key={tab.value}
               className={`${s.tab} ${filter === tab.value ? s.active : ''}`}
-              onClick={() => setFilter(tab.value)}
+              onClick={() => handleTabClick(tab.value)}
             >
               <span className={s.tabLabel}>{tab.label}</span>
               <span className={s.tabCount}>({counts[tab.value]})</span>
@@ -173,13 +301,35 @@ export function EpisodeList() {
 
       {/* ── Action bar ── */}
       <div className={s.actionBar}>
-        <button className={`${s.btn} ${s.btnAccent2}`} onClick={handleDownloadSelected}>
-          ↓ Download Selected
-        </button>
         <button className={`${s.btn} ${s.btnAccent}`} onClick={handleDownloadAll}>
-          ↓ Download All
+          <Download size={14} strokeWidth={2.5} /> Download All
+        </button>
+        <button className={`${s.btn} ${s.btnAccent2}`} onClick={handleDownloadSelected}>
+          <Download size={14} strokeWidth={2.5} /> Download Selected
+        </button>
+        <button
+          className={`${s.btn} ${s.btnGhost}`}
+          onClick={handleDownloadSubsSelected}
+          disabled={selectedSubsCount === 0}
+          title={selectedSubsCount === 0 ? 'Select episodes to download subtitles (skip active/already-done)' : `Download subtitles for ${selectedSubsCount} episode${selectedSubsCount === 1 ? '' : 's'}`}
+        >
+          CC Subs
         </button>
         <div className={s.actionSpacer} />
+        <button
+          className={`${s.btn} ${s.btnGhost}`}
+          disabled={!canRemove}
+          onClick={handleRemoveClick}
+        >
+          Remove Episodes
+        </button>
+        <button
+          className={`${s.btn} ${s.btnGhost}`}
+          disabled={!canReset}
+          onClick={handleResetClick}
+        >
+          Reset Selected
+        </button>
         <button
           className={`${s.btn} ${rediscovering ? s.btnScanning : s.btnGhost}`}
           disabled={rediscovering}
@@ -204,26 +354,11 @@ export function EpisodeList() {
           {rediscovering ? 'Discovering…' : 'Rediscover Episodes'}
         </button>
         <button
-          className={`${s.btn} ${rescanning ? s.btnScanning : s.btnGhost}`}
-          disabled={rescanning}
-          onClick={async () => {
-            if (!activeShowId) return
-            setRescanning(true)
-            await rescanEpisodes(filteredIds)
-            // Poll until sources appear on at least one episode, or 2 min timeout
-            const deadline = Date.now() + 120_000
-            const poll = setInterval(async () => {
-              await loadEpisodes(activeShowId)
-              const fresh = useStore.getState().episodes
-              const hasSources = fresh.some(ep => ep.sources && ep.sources.length > 0)
-              if (hasSources || Date.now() > deadline) {
-                clearInterval(poll)
-                setRescanning(false)
-              }
-            }, 3000)
-          }}
+          className={`${s.btn} ${s.btnGhost}`}
+          disabled={selectedIds.size === 0}
+          onClick={() => { rescanEpisodes([...selectedIds]); clearSelected() }}
         >
-          {rescanning ? 'Scanning…' : 'Rescan Sources'}
+          Rescan Sources
         </button>
       </div>
 
@@ -240,18 +375,75 @@ export function EpisodeList() {
         </label>
         <button className={s.selectionBtn} onClick={() => selectAll(filteredIds)}>Select all</button>
         <button className={s.selectionBtn} onClick={clearSelected}>Clear</button>
-        <div className={s.selectionBarDivider} />
-        <button className={s.selectionBtn} onClick={expandAll}>Expand all</button>
-        <button className={s.selectionBtn} onClick={collapseAll}>Collapse all</button>
+        {!flatView && (<>
+          <div className={s.selectionBarDivider} />
+          <button className={s.selectionBtn} onClick={expandAll}>Expand all</button>
+          <button className={s.selectionBtn} onClick={collapseAll}>Collapse all</button>
+        </>)}
         <span className={selectedIds.size > 0 ? s.selectionCountActive : s.selectionCount}>
           {selectedIds.size} selected
         </span>
       </div>
 
+      {/* ── Inline prompt (warnings / confirmations) ── */}
+      {prompt && (
+        <div className={s.promptBar}>
+          {prompt.kind === 'remove-warn' && (<>
+            <span className={s.promptText}>
+              Not-started episodes cannot be removed — deselect them first.
+            </span>
+            <button className={s.promptBtn} onClick={() => setPrompt(null)}>Dismiss</button>
+          </>)}
+
+          {prompt.kind === 'remove-confirm' && (<>
+            <span className={s.promptText}>
+              Remove {removableSelected.length} episode{removableSelected.length !== 1 ? 's' : ''}?
+            </span>
+            <label className={s.promptCheck}>
+              <input
+                type="checkbox"
+                checked={prompt.deleteFiles}
+                onChange={e => setPrompt(p => p?.kind === 'remove-confirm' ? { ...p, deleteFiles: e.target.checked } : p)}
+              />
+              Delete downloaded data
+            </label>
+            <button className={`${s.promptBtn} ${s.promptBtnDanger}`} onClick={() => doRemove(prompt.deleteFiles)}>
+              Remove
+            </button>
+            <button className={s.promptBtn} onClick={() => setPrompt(null)}>Cancel</button>
+          </>)}
+
+          {prompt.kind === 'reset-warn' && (<>
+            <span className={s.promptText}>
+              Not-started episodes are already pending — deselect them first.
+            </span>
+            <button className={s.promptBtn} onClick={() => setPrompt(null)}>Dismiss</button>
+          </>)}
+
+          {prompt.kind === 'reset-confirm' && (<>
+            <span className={s.promptText}>
+              Reset {resettableSelected.length} episode{resettableSelected.length !== 1 ? 's' : ''} to pending?
+            </span>
+            <label className={s.promptCheck}>
+              <input
+                type="checkbox"
+                checked={prompt.deleteFiles}
+                onChange={e => setPrompt(p => p?.kind === 'reset-confirm' ? { ...p, deleteFiles: e.target.checked } : p)}
+              />
+              Delete video files
+            </label>
+            <button className={s.promptBtn} onClick={() => doReset(prompt.deleteFiles)}>Reset</button>
+            <button className={s.promptBtn} onClick={() => setPrompt(null)}>Cancel</button>
+          </>)}
+        </div>
+      )}
+
       {/* ── Episodes ── */}
       <div className={s.scroll}>
         {filteredIds.length === 0 ? (
           <div className={s.empty}>No episodes match this filter.</div>
+        ) : flatView ? (
+          filteredIds.map(id => <EpisodeCard key={id} episodeId={id} />)
         ) : (
           Object.entries(seasons)
             .sort(([a], [b]) => Number(a) - Number(b))

@@ -1,0 +1,9 @@
+# Development override — builds the image locally instead of pulling from DockerHub.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+
+services:
+  api:
+    build: .
+
+  worker:
+    build: .

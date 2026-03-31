@@ -1,0 +1,24 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Frontend build deps (frontend/ is copied in stage 1, node_modules never needed in stage 2)
+frontend/node_modules/
+
+# Local dev artefacts
+*.log
+*.db
+*.db-shm
+*.db-wal
+logs/
+downloads/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,111 @@
+[2026-03-29 16:41:13] Worker started — pid=98256  max_jobs=4
+[2026-03-29 16:48:58] Download job started: ep=150 S02E02 'NCIS: Sydney Sezonul 2 Episodul 2'
+[2026-03-29 16:49:12] Episode 150: found 4 source(s)
+[2026-03-29 16:52:59] Download job finished: ep=150 status=done
+[2026-03-29 19:30:24] Download job started: ep=152 S02E04 'NCIS: Sydney Sezonul 2 Episodul 4'
+[2026-03-29 19:30:38] Episode 152: found 4 source(s)
+[2026-03-29 19:32:28] Download job finished: ep=152 status=done
+[2026-03-29 19:38:40] Download job started: ep=142 S01E01 'NCIS: Sydney Sezonul 1 Episodul 1'
+[2026-03-29 19:38:59] Episode 142: found 4 source(s)
+[2026-03-29 19:39:37] Stop downloads: mode=all killed=1
+[2026-03-29 19:39:40] Download job finished: ep=142 status=failed
+[2026-03-30 11:28:03] Worker stopped
+[2026-03-31 00:49:09] Worker started — pid=62323  max_jobs=4
+[2026-03-31 01:26:19] Worker stopped
+[2026-03-31 01:26:20] Worker started — pid=63713  max_jobs=4
+[2026-03-31 08:05:04] Worker stopped
+[2026-03-31 08:05:18] Worker started — pid=78242  max_jobs=4
+[2026-03-31 09:38:12] Scraped show 'Rooster Sezonul 1 Episodul 4 Online Subtitrat in Romana | Seriale Online' — 4 episodes
+[2026-03-31 09:38:35] Download job started: ep=171 S01E01 'Rooster Sezonul 1 Episodul 1'
+[2026-03-31 09:38:51] Episode 171: found 4 source(s)
+[2026-03-31 09:41:05] Download job finished: ep=171 status=done
+[2026-03-31 13:42:52] Scraped show 'Sullivan's Crossing (2023) Online Subtitrat in Romana | Seriale Online' — 30 episodes
+[2026-03-31 13:43:09] Scraped show 'Babies (2026) Online Subtitrat in Romana | Seriale Online' — 6 episodes
+[2026-03-31 13:43:29] Download job started: ep=205 S01E01 'Babies Sezonul 1 Episodul 1'
+[2026-03-31 13:43:32] Download job started: ep=175 S01E01 'Sullivan’s Crossing Sezonul 1 Episodul 1'
+[2026-03-31 13:43:42] Episode 205: found 4 source(s)
+[2026-03-31 13:43:59] Episode 175: found 4 source(s)
+[2026-03-31 13:45:36] Download job finished: ep=205 status=done
+[2026-03-31 13:47:29] Download job finished: ep=175 status=done
+[2026-03-31 14:07:51] Worker stopped
+[2026-03-31 14:07:52] Worker started — pid=94286  max_jobs=4
+[2026-03-31 17:50:45] Download job started: ep=176 S01E02 'Sullivan’s Crossing Sezonul 1 Episodul 2'
+[2026-03-31 17:50:45] Download job started: ep=177 S01E03 'Sullivan’s Crossing Sezonul 1 Episodul 3'
+[2026-03-31 17:51:05] Episode 176: found 4 source(s)
+[2026-03-31 17:51:20] Episode 177: found 4 source(s)
+[2026-03-31 17:51:25] Download job finished: ep=176 status=cancelling
+[2026-03-31 17:51:33] Download job finished: ep=177 status=cancelling
+[2026-03-31 17:52:26] Download job started: ep=178 S01E04 'Sullivan’s Crossing Sezonul 1 Episodul 4'
+[2026-03-31 17:52:26] Download job started: ep=179 S01E05 'Sullivan’s Crossing Sezonul 1 Episodul 5'
+[2026-03-31 17:52:26] Download job started: ep=180 S01E06 'Sullivan’s Crossing Sezonul 1 Episodul 6'
+[2026-03-31 17:52:42] Episode 178: found 4 source(s)
+[2026-03-31 17:52:42] Download job finished: ep=178 status=pending
+[2026-03-31 17:52:58] Download job started: ep=178 S01E04 'Sullivan’s Crossing Sezonul 1 Episodul 4'
+[2026-03-31 17:52:58] Download job started: ep=179 S01E05 'Sullivan’s Crossing Sezonul 1 Episodul 5'
+[2026-03-31 17:53:08] Episode 179: found 4 source(s)
+[2026-03-31 17:53:21] Episode 180: found 4 source(s)
+[2026-03-31 17:53:34] Episode 178: found 4 source(s)
+[2026-03-31 17:53:48] Episode 179: found 4 source(s)
+[2026-03-31 17:59:14] Download job finished: ep=179 status=done
+[2026-03-31 17:59:15] Download job started: ep=180 S01E06 'Sullivan’s Crossing Sezonul 1 Episodul 6'
+[2026-03-31 17:59:16] Download job finished: ep=180 status=cancelling
+[2026-03-31 17:59:17] Download job started: ep=181 S01E07 'Sullivan’s Crossing Sezonul 1 Episodul 7'
+[2026-03-31 17:59:18] Download job finished: ep=178 status=cancelling
+[2026-03-31 17:59:21] Download job finished: ep=179 status=done
+[2026-03-31 17:59:28] Episode 180: found 4 source(s)
+[2026-03-31 17:59:28] Download job finished: ep=180 status=cancelled
+[2026-03-31 17:59:42] Episode 181: found 4 source(s)
+[2026-03-31 18:02:27] Download job finished: ep=181 status=done
+[2026-03-31 18:10:37] Worker stopped
+[2026-03-31 18:10:38] Worker started — pid=3438  max_jobs=4
+[2026-03-31 18:11:58] Scraped show 'Babies (2026) Online Subtitrat in Romana | Seriale Online' — 6 episodes
+[2026-03-31 18:11:58] Probing sources for 'Babies Sezonul 1 Episodul 1'
+[2026-03-31 18:12:10] Episode 211: found 4 source(s)
+[2026-03-31 18:12:10] Probing sources for 'Babies Sezonul 1 Episodul 2'
+[2026-03-31 18:12:15] Download job started: ep=211 S01E01 'Babies Sezonul 1 Episodul 1'
+[2026-03-31 18:12:15] Download job started: ep=212 S01E02 'Babies Sezonul 1 Episodul 2'
+[2026-03-31 18:12:23] Episode 212: found 4 source(s)
+[2026-03-31 18:12:23] Propagated 4 source(s) to 6 episode(s)
+[2026-03-31 18:12:35] Episode 211: found 4 source(s)
+[2026-03-31 18:12:48] Episode 212: found 4 source(s)
+[2026-03-31 18:14:59] Download job finished: ep=211 status=done
+[2026-03-31 18:17:54] Download job finished: ep=212 status=done
+[2026-03-31 22:31:17] Subs job started: ep=212 'Babies Sezonul 1 Episodul 2'
+[2026-03-31 22:31:17] Subs job finished: ep=212
+[2026-03-31 22:31:21] Subs job started: ep=211 'Babies Sezonul 1 Episodul 1'
+[2026-03-31 22:31:22] Subs job finished: ep=211
+[2026-03-31 22:31:24] Subs job started: ep=213 'Babies Sezonul 1 Episodul 3'
+[2026-03-31 22:31:25] Subs job finished: ep=213
+[2026-03-31 23:22:30] Subs job started: ep=212 'Babies Sezonul 1 Episodul 2'
+[2026-03-31 23:22:30] Subs job finished: ep=212
+[2026-03-31 23:22:37] Subs job started: ep=214 'Babies Sezonul 1 Episodul 4'
+[2026-03-31 23:22:38] Subs job finished: ep=214
+[2026-03-31 23:22:49] Worker stopped
+[2026-03-31 23:22:50] Worker started — pid=15366  max_jobs=4
+[2026-03-31 23:22:59] Subs job started: ep=212 'Babies Sezonul 1 Episodul 2'
+[2026-03-31 23:23:00] Subs job finished: ep=212
+[2026-03-31 23:23:03] Subs job started: ep=211 'Babies Sezonul 1 Episodul 1'
+[2026-03-31 23:23:03] Subs job finished: ep=211
+[2026-03-31 23:23:11] Subs job started: ep=213 'Babies Sezonul 1 Episodul 3'
+[2026-03-31 23:23:11] Subs job finished: ep=213
+[2026-03-31 23:24:10] Scraped show 'Poker Face (2023) Online Subtitrat in Romana | Seriale Online' — 22 episodes
+[2026-03-31 23:24:10] Probing sources for 'Poker Face Sezonul 1 Episodul 1'
+[2026-03-31 23:24:26] Episode 217: found 2 source(s)
+[2026-03-31 23:24:26] Probing sources for 'Poker Face Sezonul 1 Episodul 2'
+[2026-03-31 23:24:42] Episode 218: found 2 source(s)
+[2026-03-31 23:24:42] Propagated 2 source(s) to 22 episode(s)
+[2026-03-31 23:24:51] Subs job started: ep=217 'Poker Face Sezonul 1 Episodul 1'
+[2026-03-31 23:24:51] Subs job finished: ep=217
+[2026-03-31 23:24:57] Subs job started: ep=218 'Poker Face Sezonul 1 Episodul 2'
+[2026-03-31 23:24:57] Subs job finished: ep=218
+[2026-03-31 23:26:01] Subs job started: ep=212 'Babies Sezonul 1 Episodul 2'
+[2026-03-31 23:26:02] Subs job finished: ep=212
+[2026-03-31 23:26:25] Scraped show '12 Monkeys (2015) Online Subtitrat in Romana | Seriale Online' — 47 episodes
+[2026-03-31 23:26:25] Probing sources for '12 Monkeys Sezonul 1 Episodul 1'
+[2026-03-31 23:26:38] Episode 239: found 4 source(s)
+[2026-03-31 23:26:38] Probing sources for '12 Monkeys Sezonul 1 Episodul 2'
+[2026-03-31 23:26:51] Episode 240: found 4 source(s)
+[2026-03-31 23:26:51] Propagated 4 source(s) to 47 episode(s)
+[2026-03-31 23:27:09] Subs job started: ep=239 '12 Monkeys Sezonul 1 Episodul 1'
+[2026-03-31 23:27:09] Subs job finished: ep=239
+[2026-03-31 23:27:39] Worker stopped

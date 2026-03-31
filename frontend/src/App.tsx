@@ -8,7 +8,7 @@ import './styles/globals.css'
 const layoutStyle: React.CSSProperties = {
   display: 'grid',
   gridTemplateRows: 'auto 1fr',
-  gridTemplateColumns: '300px 1fr',
+  gridTemplateColumns: '400px 1fr',
   gridTemplateAreas: '"topbar topbar" "sidebar main"',
   height: '100vh',
 }

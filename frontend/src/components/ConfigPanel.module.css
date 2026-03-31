@@ -200,7 +200,89 @@
   font-weight: 700;
   font-size: 0.82rem;
   cursor: pointer;
+  transition: opacity 0.15s;
 }
+.saveBtn:disabled { opacity: 0.35; cursor: default; }
+
+.sourceActionBtn {
+  background: var(--panel);
+  color: var(--subtext);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.sourceActionBtn:hover {
+  background: var(--border);
+  color: var(--text);
+  border-color: var(--subtext);
+}
+
+/* ── Logging grid ── */
+.logGrid {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.logGridHeader {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.logRowLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.logSelect {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  min-width: 90px;
+}
+
+.logSelect:focus { border-color: var(--accent); }
+
+.logSizeRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logSizeInput {
+  width: 52px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text);
+  outline: none;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.logSizeInput:focus { border-color: var(--accent); }
 
 .cancelBtn {
   background: var(--panel);
@@ -212,4 +294,100 @@
   font-weight: 700;
   font-size: 0.82rem;
   cursor: pointer;
+}
+
+/* ── Restart prompt overlay ─────────────────────────────────────────────── */
+
+.restartOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 15, 17, 0.88);
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 24px;
+}
+
+.restartBox {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.restartTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.restartSub {
+  font-size: 0.72rem;
+  color: var(--subtext);
+  line-height: 1.5;
+}
+
+.restartDownloadList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.restartDownloadList li {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+  background: var(--panel);
+  border-radius: 5px;
+  border-left: 2px solid var(--dl);
+}
+
+.restartDownloadShow {
+  font-size: 0.60rem;
+  color: var(--subtext);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.restartDownloadTitle {
+  font-size: 0.70rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.restartBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.restartBtnGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.restartHint {
+  font-size: 0.65rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.dangerBtn {
+  border-color: var(--danger) !important;
+  color: var(--danger) !important;
+}
+.dangerBtn:hover {
+  background: var(--danger) !important;
+  color: var(--bg) !important;
 }
