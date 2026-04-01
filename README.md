@@ -15,17 +15,21 @@ The easiest way to run the app. Docker handles Python, Playwright, ffmpeg, and R
 
 ### 2. Create the required folders
 
-Docker Compose mounts these directories from your host machine:
+Compose mounts these host directories relative to the `docker-compose.yml` file:
 
 ```bash
-mkdir -p ~/StreamGrabber/downloads   # Downloaded video files
-mkdir -p ~/StreamGrabber/db          # SQLite database
+mkdir -p data/downloads   # Downloaded video files + yt-dlp archive
+mkdir -p data/db          # SQLite database
+mkdir -p data/logs        # API and worker log files
+mkdir -p data/redis       # Redis RDB snapshot (job queue persistence)
 ```
 
 | Folder | Role |
 |---|---|
-| `downloads/` | Video files + yt-dlp archive |
-| `db/` | SQLite database file |
+| `data/downloads/` | Video files + yt-dlp archive |
+| `data/db/` | SQLite database file |
+| `data/logs/` | API and worker log files |
+| `data/redis/` | Redis persistence snapshot |
 
 ### 3. Start everything
 
@@ -33,7 +37,7 @@ mkdir -p ~/StreamGrabber/db          # SQLite database
 docker compose up -d
 ```
 
-This builds the image (first run takes a few minutes) and starts the API, worker, and Redis. Open **http://localhost:8000** in your browser.
+Pulls the image and starts Redis, the API, and the worker. Open **http://localhost:8000** in your browser.
 
 ### 4. Useful commands
 
