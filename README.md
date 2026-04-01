@@ -5,6 +5,53 @@ Built with Python, FastAPI, Playwright, and yt-dlp.
 
 ---
 
+## Quick Setup (Docker Compose) — recommended
+
+The easiest way to run the app. Docker handles Python, Playwright, ffmpeg, and Redis automatically.
+
+### 1. Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+
+### 2. Create the required folders
+
+Docker Compose mounts these directories from your host machine:
+
+```bash
+mkdir -p ~/StreamGrabber/downloads   # Downloaded video files
+mkdir -p ~/StreamGrabber/db          # SQLite database
+```
+
+| Folder | Role |
+|---|---|
+| `downloads/` | Video files + yt-dlp archive |
+| `db/` | SQLite database file |
+
+### 3. Start everything
+
+```bash
+docker compose up -d
+```
+
+This builds the image (first run takes a few minutes) and starts the API, worker, and Redis. Open **http://localhost:8000** in your browser.
+
+### 4. Useful commands
+
+```bash
+# View logs
+docker compose logs -f api
+docker compose logs -f worker
+
+# Update yt-dlp without rebuilding the image
+docker compose exec worker pip install -U yt-dlp
+docker compose restart worker
+
+# Stop
+docker compose down
+```
+
+---
+
 ## Quick Setup (macOS)
 
 ### 1. Prerequisites
